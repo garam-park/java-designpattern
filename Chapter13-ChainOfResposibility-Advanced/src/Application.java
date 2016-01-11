@@ -2,8 +2,10 @@
 public class Application {
 
 	public static void main(String[] args) {
+		
 		Attack attack = new Attack();
-		attack.setAmount(100);
+ 		attack.setAmount(100);
+		
 		Armor armorA = new Armor() {
 
 			@Override
@@ -25,6 +27,7 @@ public class Application {
 				attack.setAmount(amount);
 			}
 		};
+		
 		armorA.setNextArmor(armorB);
 		
 		armorA.depense(attack);
@@ -42,7 +45,9 @@ public class Application {
 				attack.setAmount(amount);
 			}
 		});
+		
 		attack.setAmount(100);
+
 		armorA.depense(attack);
 		
 		System.out.println(attack.getAmount());
